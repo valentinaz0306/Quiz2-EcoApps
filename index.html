@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Quiz2 EcoApps</title>
+  <link rel="stylesheet" href="css/index.css" />
+</header>
+
+<body>
+  <div id="general">
+    <h1>Global Solution SAS</h1>
+    <input id="descripcion" placeholder="Descripcion de tarea"></input>
+    <button id="tareaBtn">Nueva tarea</button>
+  </div>
+
+  <div id="toDoContainer">
+
+
+  </div>
+
+</body>
+
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyATXvWcsS_Sse-rlqlkDE0NbyB7TghXtuY",
+    authDomain: "quiz2ecoapps.firebaseapp.com",
+    databaseURL: "https://quiz2ecoapps.firebaseio.com",
+    projectId: "quiz2ecoapps",
+    storageBucket: "quiz2ecoapps.appspot.com",
+    messagingSenderId: "662564741895",
+    appId: "1:662564741895:web:30c3b1738f9c5474471ba2",
+    measurementId: "G-5LT8THB904"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+<script src="components/ToDoList.js"></script>
+<script src="components/DoingList.js"></script>
+<script src="components/DoneList.js"></script>
+<script src="index.js"></script>
