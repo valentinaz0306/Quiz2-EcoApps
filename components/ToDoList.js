@@ -8,8 +8,11 @@ class ToDoList {
     render = () => {
 
         let component = document.createElement('div');
+        component.className= 'ToDoList';
+
         component.innerHTML = (
-            '<p>' + this.tarea.listaTarea + '</p>'
+         this.tarea.descripcionTarea
+        // '<p>' + this.tarea.descripcionTarea+ '</p>'
         );
         return component;
     }
