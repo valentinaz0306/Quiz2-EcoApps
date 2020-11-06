@@ -18,9 +18,14 @@ enviarTarea = () => {
 
     let reference = database.ref('tareas/toDo').push();
 
+    //fecha
+    let now = new Date();
+    let fecha = '' + now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+
     let listaTarea = {
         id: reference.key,
         descripcionTarea: descripcion.value,
+        date: fecha,
     }
 
     reference.set(listaTarea);
@@ -79,5 +84,4 @@ database.ref('tareas/done').on('value', function (data) {
 
 });
 
-// clase doing
 

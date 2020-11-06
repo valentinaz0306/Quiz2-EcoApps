@@ -17,11 +17,22 @@ display:flex;
 flex-direction: row;
 
 }
-#title2{
 
-    margin-left: 39%;
-    margin-top: -380px;
- }
+#titulos{
+
+display:flex;
+flex-direction: row;
+}
+
+#t1{
+margin-left: 25%;
+}
+
+
+#t2{
+    margin-left: 24%;
+    }
+
 
 .ToDoList{
 
@@ -59,7 +70,17 @@ flex-direction: row;
    background-color: sandybrown;
 }
 
+.fecha{
 
+    position: absolute;
+    margin-top: 3px;
+    left: 2;
+    top: 0;
+   color: darkmagenta;
+    
+     
+
+}
 .DoingList{
 
     margin-top: 20%;

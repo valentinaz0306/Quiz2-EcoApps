@@ -14,6 +14,12 @@ class ToDoList {
             this.tarea.descripcionTarea
             // '<p>' + this.tarea.descripcionTarea+ '</p>'
         );
+
+        let fecha = document.createElement('div');
+        fecha.className = 'fecha';
+        fecha.innerHTML = this.tarea.date;
+
+
         //boton rojo
         let delateBtn = document.createElement('button');
         delateBtn.className = 'delateBtn';
@@ -25,6 +31,7 @@ class ToDoList {
 
         component.appendChild(delateBtn);
         component.appendChild(pasarBtn);
+        component.appendChild(fecha);
 
         delateBtn.addEventListener('click', () => {
             const database = firebase.database();
