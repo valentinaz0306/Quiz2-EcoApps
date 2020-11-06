@@ -16,7 +16,7 @@ enviarTarea = () => {
         return;
     }
 
-    let reference = database.ref('tareas').push();
+    let reference = database.ref('tareas/toDo').push();
 
     let listaTarea = {
         id: reference.key,
@@ -31,7 +31,7 @@ tareaBtn.addEventListener('click', enviarTarea);
 
 // Lectura
 
-database.ref('tareas').on('value', function (data) {
+database.ref('tareas/toDo').on('value', function (data) {
     toDoContainer.innerHTML = '';
     data.forEach(
 
@@ -42,6 +42,38 @@ database.ref('tareas').on('value', function (data) {
             //instanciar clase TOdo
             let fila = new ToDoList(valor);
             toDoContainer.appendChild(fila.render());
+
+        });
+
+});
+
+database.ref('tareas/doing').on('value', function (data) {
+    doingContainer.innerHTML = '';
+    data.forEach(
+
+        listaTarea => {
+
+            let valor = listaTarea.val();
+            console.log(valor, descripcion);
+            //instanciar clase TOdo
+            let fila = new DoingList(valor);
+            doingContainer.appendChild(fila.render());
+
+        });
+
+});
+
+database.ref('tareas/done').on('value', function (data) {
+    doneContainer.innerHTML = '';
+    data.forEach(
+
+        listaTarea => {
+
+            let valor = listaTarea.val();
+            console.log(valor, descripcion);
+            //instanciar clase TOdo
+            let fila = new DoneList(valor);
+            doneContainer.appendChild(fila.render());
 
         });
 

@@ -12,7 +12,7 @@ class ToDoList {
 
         component.innerHTML = (
             this.tarea.descripcionTarea
-           
+            // '<p>' + this.tarea.descripcionTarea+ '</p>'
         );
         //boton rojo
         let delateBtn = document.createElement('button');
@@ -28,7 +28,15 @@ class ToDoList {
 
         delateBtn.addEventListener('click', () => {
             const database = firebase.database();
-            database.ref('tareas/' + this.tarea.id).set(null);
+            database.ref('tareas/toDo/' + this.tarea.id).set(null);
+
+
+        });
+
+        pasarBtn.addEventListener('click', () => {
+            const database = firebase.database();
+            database.ref('tareas/doing/' + this.tarea.id).set(this.tarea);
+            database.ref('tareas/toDo/' + this.tarea.id).set(null);
 
 
         });

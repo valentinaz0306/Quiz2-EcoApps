@@ -11,6 +11,12 @@ button#tareaBtn{
     color: white;
 }
 
+#contenedorGeneral{
+
+display:flex;
+flex-direction: row;
+
+}
 #title2{
 
     margin-left: 39%;
@@ -26,6 +32,7 @@ button#tareaBtn{
     height: 8em;
     padding: 1em; 
     position: relative;
+    
 }
 
 .delateBtn{
@@ -44,6 +51,14 @@ button#tareaBtn{
     background-color: royalblue;
 }
 
+.volverBtn{
+
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+   background-color: sandybrown;
+}
+
 
 .DoingList{
 
@@ -54,4 +69,38 @@ button#tareaBtn{
     height: 8em;
     padding: 1em; 
     position: relative;
+    
 }
+
+.DoneList{
+
+    margin-top: 20%;
+    margin-bottom: 20em;
+    background-color: thistle;
+    width: 16em;
+    height: 8em;
+    padding: 1em; 
+    position: relative;
+    
+}
+
+#toDoContainer{
+width: 18em;
+height: 100em;
+margin-right: 10%;
+
+}
+
+#doingContainer{
+    width: 18em;
+    height: 100em;
+    margin-right: 10%;
+    
+    }
+
+    #doneContainer{
+        width: 18em;
+        height: 100em;
+        margin-right: 10%;
+        
+        }
