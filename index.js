@@ -2,7 +2,10 @@ const database = firebase.database();
 const descripcion = document.getElementById('descripcion');
 const tareaBtn = document.getElementById('tareaBtn');
 const toDoContainer = document.getElementById('toDoContainer');
+const doingContainer = document.getElementById('doingContainer');
+const doneContainer = document.getElementById('doneContainer');
 
+doingContainer
 
 enviarTarea = () => {
 
@@ -29,7 +32,7 @@ tareaBtn.addEventListener('click', enviarTarea);
 // Lectura
 
 database.ref('tareas').on('value', function (data) {
-
+    toDoContainer.innerHTML = '';
     data.forEach(
 
         listaTarea => {
@@ -37,9 +40,12 @@ database.ref('tareas').on('value', function (data) {
             let valor = listaTarea.val();
             console.log(valor, descripcion);
             //instanciar clase TOdo
-            let fila= new ToDoList(valor);
+            let fila = new ToDoList(valor);
             toDoContainer.appendChild(fila.render());
 
         });
 
 });
+
+// clase doing
+

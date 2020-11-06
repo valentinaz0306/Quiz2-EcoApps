@@ -11,6 +11,11 @@ button#tareaBtn{
     color: white;
 }
 
+#title2{
+
+    margin-left: 39%;
+    margin-top: -380px;
+ }
 
 .ToDoList{
 
@@ -20,4 +25,33 @@ button#tareaBtn{
     width: 16em;
     height: 8em;
     padding: 1em; 
+    position: relative;
+}
+
+.delateBtn{
+ 
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: tomato;
+}
+
+.pasarBtn{
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: royalblue;
+}
+
+
+.DoingList{
+
+    margin-top: 20%;
+    margin-bottom: 20em;
+    background-color: thistle;
+    width: 16em;
+    height: 8em;
+    padding: 1em; 
+    position: relative;
 }
